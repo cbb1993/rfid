@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+       <RelativeLayout
+           android:id="@+id/rl_statistics"
+           android:layout_width="67dp"
+           android:layout_height="match_parent">
+           <TextView
+               android:id="@+id/tv_statistics"
+               android:layout_centerInParent="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/statistics"
+               android:textColor="@color/main"
+               android:textSize="16sp"
+               />
+           <View
+               android:id="@+id/line_statistics"
+               android:background="@color/main"
+               android:layout_alignParentBottom="true"
+               android:layout_centerHorizontal="true"
+               android:layout_width="40dp"
+               android:layout_height="3dp"/>
+       </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_detail"
+            android:layout_width="67dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/detail"
+                android:textColor="@color/black_6"
+                android:textSize="16sp" />
+            <View
+                android:id="@+id/line_detail"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="3dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_2"
+            android:background="#FAFBFF"
+            android:layout_width="match_parent"
+            android:layout_height="46dp">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/code"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="140dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="80dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/size"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/days"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:background="#FAFBFF"
+            android:layout_width="match_parent"
+            android:layout_height="46dp">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hospital"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_marginStart="150dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="29dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_statistics"
+            android:layout_marginBottom="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/recycler_detail"
+            android:layout_marginBottom="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/btn_save"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_button"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:layout_width="316dp"
+            android:layout_height="44dp">
+            <ImageView
+                android:layout_marginEnd="4dp"
+                android:src="@mipmap/btn_save"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/save"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_clear"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_button2"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_width="316dp"
+            android:layout_height="44dp">
+            <ImageView
+                android:layout_marginEnd="4dp"
+                android:src="@mipmap/btn_trash"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:textColor="@color/main"
+                android:text="@string/clear"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

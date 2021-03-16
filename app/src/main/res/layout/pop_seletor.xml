@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+       <LinearLayout
+           android:background="@color/white"
+           android:orientation="vertical"
+           android:layout_alignParentBottom="true"
+           android:layout_width="match_parent"
+           android:layout_height="360dp">
+            <RelativeLayout
+                android:background="@drawable/shape_pop"
+                android:layout_width="match_parent"
+                android:layout_height="46dp">
+                <TextView
+                    android:id="@+id/cancel"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cancel"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_please"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/confirm"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:layout_marginEnd="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/confirm"
+                    android:textColor="@color/main"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+          <LinearLayout
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+              <com.app.rfidmaster.view.seletor.PickerScrollView
+                  android:id="@+id/pickerscrlllview"
+                  android:layout_width="match_parent"
+                  android:layout_height="230dp"/>
+          </LinearLayout>
+
+
+       </LinearLayout>
+   </RelativeLayout>
+</LinearLayout>
